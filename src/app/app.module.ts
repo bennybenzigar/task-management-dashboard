@@ -71,7 +71,7 @@ import { UserListingComponent } from './components/user-listing/user-listing.com
       closeButton: true,
       progressBar: true,
       progressAnimation: 'increasing',
-      positionClass: 'toast-center-center',
+      positionClass: 'toast-right-bottom',
       preventDuplicates: true
     }),
 
