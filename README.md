@@ -2,7 +2,10 @@
 
 Username: admin, Password: admin@123
 Username: benny, Password: benny@123
-
+## Git Repository
+git clone https://github.com/bennybenzigar/task-management-dashboard.git
+## Hosted url
+https://moonlit-yeot-ae6243.netlify.app/
 ## Overview
 This project is a **Task Management Dashboard** built with **Angular**, featuring:
 - Kanban-style board (To Do, In Progress, Done)
