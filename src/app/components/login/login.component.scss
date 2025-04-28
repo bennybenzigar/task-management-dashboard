@@ -1,0 +1,115 @@
+
+
+
+.login-container {
+
+    background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    position: relative;
+    
+    .task-title{
+        position: absolute;
+
+        top: 40px;
+        left:40px;
+        font-size: 40px;
+        font-weight: bolder;
+    }
+    .image-container {
+      flex: 1;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+
+    display: flex !important
+    ;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-direction: column;
+  
+      img {
+        max-width: 100%;
+        height: auto;
+        max-height: 50vh;
+      }
+    }
+  
+    .form-container {
+      flex: 1;
+      padding: 20px;
+      max-width: 400px;
+      width: 100%;
+      background-color:transparent !important;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+  
+      div {
+        margin-bottom: 15px;
+  
+        label {
+          display: block;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-sizing: border-box;
+        }
+  
+        .error {
+          color: red;
+          font-size: 12px;
+        }
+      }
+  
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #45a049;
+        }
+  
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .image-container {
+      display: none;
+    }
+  
+    .form-container {
+      max-width: 100%;
+    }
+  }
+  
+ 

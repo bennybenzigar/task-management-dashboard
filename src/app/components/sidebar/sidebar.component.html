@@ -1,0 +1,36 @@
+<div class="layout">
+    <div class="sidebar" *ngIf="authUser" [class.collapsed]="!isExpanded">
+      <button mat-icon-button class="toggle-btn  d-none d-md-inline-block" (click)="toggleSidebar()">
+        <mat-icon>{{ isExpanded ? 'chevron_left' : 'chevron_right' }}</mat-icon>
+      </button>
+      <!-- <p>{{authUser?.userName}}</p> -->
+      <div class="menu">
+        <div  class="menu-item" routerLink="/dashboard">
+          <mat-icon>dashboard</mat-icon>
+          <span *ngIf="isExpanded">Dashboard</span>
+        </div>
+        <div class="menu-item" routerLink="/task-history">
+          <mat-icon>assignment</mat-icon>
+          <span  *ngIf="isExpanded">Tasks History</span>
+        </div>
+        <div class="menu-item" (click)="navigateTouser()">
+          <mat-icon>person</mat-icon>
+          <span *ngIf="isExpanded">User</span>
+        </div>
+
+        <div class="menu-item" (click)="logout()">
+          <mat-icon>settings</mat-icon>
+          <span *ngIf="isExpanded">Settings</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="main-content">
+     
+     
+    <router-outlet>
+
+    </router-outlet>
+    </div>
+  </div>
+  

@@ -1,0 +1,37 @@
+.delete-confirmation{
+   
+  background-color:   rgb(252 230 230) !important;
+
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+
+::ng-deep  .mat-mdc-dialog-container{
+// padding: 20px;
+border-radius: 12px;
+
+}
+
+::ng-deep .mdc-dialog__surface{
+
+padding: 10px;
+border-radius: 12px;
+// background-color: aqua !important;
+background: linear-gradient(45deg, #ff4e50, #f9d423) !important;
+}
+
+
+.delete-btn{
+    background: linear-gradient(45deg, #ff4e50, #f9d423) !important;
+color: white !important;
+border-radius: 8px;
+font-size: x-small;
+}
+
+.cancel-btn{
+    background: linear-gradient(45deg, #ff7e5f, #feb47b) !important;
+    color: white !important;
+    border-radius: 8px;
+    font-size: x-small;
+}

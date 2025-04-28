@@ -1,0 +1,346 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Design Dashboard",
+      "description": "Design the layout for the Kanban board.",
+      "status": "Done",
+      "priority": "High",
+      "dueDate": "2025-04-30",
+      "assignee": "benny"
+    },
+    {
+      "id": "2",
+      "title": "Implement Login",
+      "description": "Add authentication system with JWT.",
+      "status": "Done",
+      "priority": "Medium",
+      "dueDate": "2025-05-02",
+      "assignee": "benny"
+    },
+    {
+      "title": "API Integration",
+      "description": "Connect frontend with mock API.",
+      "status": "To Do",
+      "priority": "High",
+      "dueDate": "2025-05-04",
+      "id": "3",
+      "assignee": "adarsh"
+    },
+    {
+      "id": "6",
+      "title": "Add Task Filters",
+      "description": "Implement filters by status and priority.",
+      "status": "Done",
+      "priority": "Medium",
+      "dueDate": "2025-05-03",
+      "assignee": "benny"
+    },
+    {
+      "title": "Drag and Drop",
+      "description": "Enable task movement across columns.",
+      "status": "To Do",
+      "priority": "High",
+      "dueDate": "2025-05-06",
+      "assignee": "benny",
+      "id": "7"
+    },
+    {
+      "id": "8",
+      "title": "Dark Mode Toggle",
+      "description": "Allow users to switch themes.",
+      "status": "To Do",
+      "priority": "Low",
+      "dueDate": "2025-05-10",
+      "assignee": "admin"
+    },
+    {
+      "id": "9",
+      "title": "Export Tasks",
+      "description": "Enable task export to CSV.",
+      "status": "To Do",
+      "priority": "Medium",
+      "dueDate": "2025-04-25",
+      "assignee": "benny"
+    },
+    {
+      "id": "10",
+      "title": "Sidebar Component",
+      "description": "Build collapsible sidebar menu.",
+      "status": "Completed",
+      "priority": "High",
+      "dueDate": "2025-05-07",
+      "assignee": "benny"
+    },
+    {
+      "id": "11",
+      "title": "User Roles",
+      "description": "Add user role permissions.",
+      "status": "In Progress",
+      "priority": "High",
+      "dueDate": "2025-05-12",
+      "assignee": "benny"
+    },
+    {
+      "id": "12",
+      "title": "Profile Page",
+      "description": "Create user profile view/edit page.",
+      "status": "In Progress",
+      "priority": "Low",
+      "dueDate": "2025-04-29",
+      "assignee": "benny"
+    },
+    {
+      "id": "13",
+      "title": "Notification System",
+      "description": "Add snackbar to show success/fail messages.",
+      "status": "In Progress",
+      "priority": "Medium",
+      "dueDate": "2025-05-05",
+      "assignee": "benny"
+    },
+    {
+      "id": "14",
+      "title": "Theme Colors",
+      "description": "Standardize theme with Material.",
+      "status": "In Progress",
+      "priority": "Low",
+      "dueDate": "2025-05-08",
+      "assignee": "benny"
+    },
+    {
+      "id": "15",
+      "title": "Error Handling",
+      "description": "Handle API errors gracefully.",
+      "status": "In Progress",
+      "priority": "High",
+      "dueDate": "2025-05-03",
+      "assignee": "benny"
+    },
+    {
+      "id": "16",
+      "title": "Documentation",
+      "description": "Write README and API docs.",
+      "status": "Done",
+      "priority": "Medium",
+      "dueDate": "2025-04-26",
+      "assignee": "benny"
+    },
+    {
+      "id": "17",
+      "title": "Add Icons",
+      "description": "Use Material icons for menu items.",
+      "status": "In Progress",
+      "priority": "Low",
+      "dueDate": "2025-05-02",
+      "assignee": "benny"
+    },
+    {
+      "id": "18",
+      "title": "Kanban Styling",
+      "description": "Improve Kanban card styles.",
+      "status": "In Progress",
+      "priority": "Medium",
+      "dueDate": "2025-05-09",
+      "assignee": "benny"
+    },
+    {
+      "id": "19",
+      "title": "Refactor Services",
+      "description": "Split large services into modules.",
+      "status": "In Progress",
+      "priority": "High",
+      "dueDate": "2025-05-04",
+      "assignee": "benny"
+    },
+    {
+      "id": "20",
+      "title": "Deploy App",
+      "description": "Push the app to Vercel/Netlify.",
+      "status": "Done",
+      "priority": "High",
+      "dueDate": "2025-04-27",
+      "assignee": "benny"
+    },
+    {
+      "id": "2b11",
+      "title": "create ui ux",
+      "description": "implement dashboard design",
+      "status": "To Do",
+      "priority": "Low",
+      "dueDate": "2025-04-15T18:30:00.000Z",
+      "assignee": "benny"
+    },
+    {
+      "id": "7b52",
+      "title": "permission in setting screen",
+      "description": "backend work need to be completed in 2 days ",
+      "status": "To Do",
+      "priority": "Medium",
+      "dueDate": "2025-04-22T18:30:00.000Z",
+      "assignee": "benny"
+    }
+  ],
+  "task-history": [
+    {
+      "id": "60f0",
+      "status": "updated",
+      "title": "API Integration",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 12:22:29 AM"
+    },
+    {
+      "id": "19a4",
+      "status": "updated",
+      "title": "API Integration",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 11:22:52 AM"
+    },
+    {
+      "id": "e83a",
+      "status": "updated",
+      "title": "Export Tasks",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 11:22:56 AM"
+    },
+    {
+      "id": "42c6",
+      "status": "created",
+      "title": "permission in setting screen",
+      "description": "Task created successfully",
+      "time": "4/27/2025, 11:25:00 AM"
+    },
+    {
+      "id": "f477",
+      "status": "deleted",
+      "title": "Responsive Design",
+      "description": "Task deleted successfully",
+      "time": "4/27/2025, 11:44:29 AM"
+    },
+    {
+      "id": "f4f8",
+      "status": "updated",
+      "title": "API Integration",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 12:40:05 PM"
+    },
+    {
+      "id": "0115",
+      "status": "updated",
+      "title": "undefined assigned task to benny",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 7:55:10 PM"
+    },
+    {
+      "id": "c98a",
+      "status": "updated",
+      "title": "undefined assigned task to benny",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 7:56:59 PM"
+    },
+    {
+      "id": "05f7",
+      "status": "updated",
+      "title": "admin assigned task to admin",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:03:55 PM"
+    },
+    {
+      "id": "8226",
+      "status": "updated",
+      "title": "admin assigned task to admin",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:05:17 PM"
+    },
+    {
+      "id": "22c9",
+      "status": "updated",
+      "title": "admin assigned task to benny",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:05:31 PM"
+    },
+    {
+      "id": "982c",
+      "status": "updated",
+      "title": "admin assigned task to benny",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:06:15 PM"
+    },
+    {
+      "id": "6179",
+      "status": "updated",
+      "title": "admin assigned task to admin",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:08:50 PM"
+    },
+    {
+      "id": "6eab",
+      "status": "updated",
+      "title": "Drag and Drop",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:31:20 PM"
+    },
+    {
+      "id": "c123",
+      "status": "updated",
+      "title": "admin assigned task to benny",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 8:31:33 PM"
+    },
+    {
+      "id": "7214",
+      "status": "updated",
+      "title": "Export Tasks",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 9:40:28 PM"
+    },
+    {
+      "id": "bff5",
+      "status": "updated",
+      "title": "Sidebar Component",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 9:56:38 PM"
+    },
+    {
+      "id": "9a77",
+      "status": "updated",
+      "title": "Drag and Drop",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 9:59:07 PM"
+    },
+    {
+      "id": "a33c",
+      "status": "updated",
+      "title": "admin assigned task to adarsh",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 10:06:42 PM"
+    },
+    {
+      "id": "a4f1",
+      "status": "updated",
+      "title": "API Integration",
+      "description": "Task updated successfully",
+      "time": "4/27/2025, 10:32:44 PM"
+    }
+  ],
+  "user": [
+    {
+        "id":1,
+      "userName": "admin",
+      "password": "admin@123",
+      "role": "admin"
+    },
+    {
+        "id":2,
+      "userName": "benny",
+      "password": "benny@123",
+      "role": "user"
+    },
+    {
+        "id":3,
+      "userName": "adarsh",
+      "password": "adarsh@123",
+      "role": "user"
+    }
+  ]
+}

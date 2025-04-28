@@ -1,0 +1,239 @@
+<h2>Task Management Dashboard</h2>
+
+<div class="row">
+
+  <div class="col-md-3 dashboard-card-todo">
+    
+    <div  class="d-flex justify-content-between mt-2">
+      <h2> Status:   To Do</h2>
+
+      <img src="assets/icons/work-in-progress.png" alt="">
+
+      <!-- <div> -->
+        <!-- C:\benny\private\task-management-app\src\assets\icons\work-in-progress.png -->
+
+      <!-- </div> -->
+    </div>
+    <h1  class="text-white">{{todo.length}}</h1>
+    <p class="task-description text-white">These are the tasks that are planned but not yet started.</p>
+
+  </div>
+
+
+  <div class="col-md-3 dashboard-card-pending">
+    
+    <div  class="d-flex justify-content-between mt-2">
+      <h2> Status:  Pending</h2>
+      <!-- C:\benny\private\task-management-app\src\assets\icons\ -->
+      <img src="assets/icons/hourglass.png" alt="">
+
+      <!-- <div> -->
+      
+
+      <!-- </div> -->
+    </div>
+    <h1  class="text-white">{{inProgress.length}}</h1>
+    <p class="task-description text-white">
+      Tasks that are yet to be addressed or are waiting for prerequisites to complete.
+    </p>
+
+  </div>
+  <div class="col-md-3 dashboard-card-completed">
+    
+    <div  class="d-flex justify-content-between mt-2">
+      <h2> Status:  Completed</h2>
+
+      <img src="assets/icons/completed-task.png" alt="">
+
+      <!-- <div> -->
+      
+
+      <!-- </div> -->
+    </div>
+    <h1  class="text-white">{{done.length}}</h1>
+    <p class="task-description text-white">
+      Tasks that have been successfully addressed and are marked as complete.
+    </p>
+
+  </div>
+
+</div>
+
+<div class="row d-flex justify-content-end">
+
+
+  <button class="create-btn me-3" (click)="createTask()"> Create Task</button>
+</div>
+
+<div class="row d-flex">
+
+
+  <!-- <button  class="btn btn-primary">asd</button> -->
+  <div class="col-md-4">
+    <!-- <div class="example-container"> -->
+    <h2>To Do</h2>
+    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo"
+      [cdkDropListConnectedTo]="[inProgressList, doneList]" class="example-list  todo-card"
+      (cdkDropListDropped)="drop($event, 'To Do')">
+      <div *ngFor="let item of todo" class="todo-box d-block" [ngClass]="getPriorityClass(item.priority)" cdkDrag>
+
+        <div>
+          <h3>
+            {{item.title}}
+          </h3>
+
+          <p>{{item.description}}</p>
+          <p>{{item.status}}</p>
+          <p>{{item.priority}}</p>
+          <p>{{item.dueDate}}</p>
+          <div class="m-2">
+            <!-- <label for="assignTask">Assign Task</label> -->
+            <select id="assignTask" placeholder="Assign Task" [(ngModel)]="item.assignee" (ngModelChange)="onUserChange($event, item)" name="assignTask" class="form-select">
+              <option *ngFor="let u of user" [value]="u.userName ">
+                {{ u.userName }}
+              </option>
+            </select>
+          </div>
+
+
+          <div class="d-flex justify-content-end w-100 task-card">
+            <!-- <button class="me-2 details-btn"> Details</button> -->
+            <button class="me-2 edit-btn" (click)="createTask(item)">Edit</button>
+            <button class="me-2 delete-btn" (click)="deleteTask(item)">Delete</button>
+
+
+
+            <div class="dropdown">
+              <a class="btn  dropdown-toggle status-btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Status
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('To Do',item)">To Do</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('In Progress',item)">In Progress</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('Completed',item)">Completed</a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+      <div>
+
+
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="col-md-4">
+
+    <!-- <div class="example-container"> -->
+    <h2>In Progress</h2>
+    <div cdkDropList #inProgressList="cdkDropList" [cdkDropListData]="inProgress"
+      [cdkDropListConnectedTo]="[todoList, doneList]" class="example-list"
+      (cdkDropListDropped)="drop($event, 'In Progress')">
+      <div *ngFor="let item of inProgress" class="progress-box" [ngClass]="getPriorityClass(item.priority)" cdkDrag>
+        <div>
+          <h3>
+            {{item.title}}
+          </h3>
+
+          <p>{{item.description}}</p>
+          <p>{{item.status}}</p>
+          <p>{{item.priority}}</p>
+          <p>{{item.dueDate}}</p>
+          <div class="d-flex justify-content-end w-100 task-card">
+            <!-- <button class="me-2 details-btn"> Details</button> -->
+            <!-- <button class="me-2 edit-btn" (click)="createTask(item)">Edit</button>
+            <button class="me-2 delete-btn" (click)="deleteTask(item.id)">Delete</button> -->
+
+
+
+            <div class="dropdown">
+              <a class="btn  dropdown-toggle status-btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Status
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('To Do',item)">To Do</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('In Progress',item)">In Progress</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('Completed',item)">Completed</a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+  <div class="col-md-4">
+    <!-- <div class="example-container"> -->
+    <h2>Completed</h2>
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList, inProgressList]" class="example-list"
+      (cdkDropListDropped)="drop($event, 'Done')">
+      <div *ngFor="let item of done" class="completed-box" [ngClass]="getPriorityClass(item.priority)" cdkDrag>
+        <div>
+          <h3>
+            {{item.title}}
+          </h3>
+
+          <p>{{item.description}}</p>
+          <p>{{item.status}}</p>
+          <p>{{item.priority}}</p>
+          <p>{{item.dueDate}}</p>
+          <div class="d-flex justify-content-end w-100 task-card">
+            <!-- <button class="me-2 details-btn"> Details</button> -->
+            <!-- <button class="me-2 edit-btn" (click)="createTask(item)">Edit</button>
+            <button class="me-2 delete-btn" (click)="deleteTask(item.id)">Delete</button> -->
+
+
+
+            <div class="dropdown">
+              <a class="btn  dropdown-toggle status-btn" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Status
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('To Do',item)">To Do</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('In Progress',item)">In Progress</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" (click)="statusChange('Completed',item)">Completed</a>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- </div> -->
+  </div>
+</div>

@@ -1,0 +1,37 @@
+
+
+
+<div class="login-container  vh-100 bg-gradient-primary position-relative">
+  
+  <!-- <h3 class="task-title">Task Management Dashboard</h3> -->
+  <div class="image-container flex-fill d-block justify-content-center align-items-center mt-sm-4">
+ 
+
+    <img src="assets/icons/login-image.png" alt="Login Image" class="img-fluid" />
+  </div>
+  <div class="form-container m-3 flex-fill p-4 bg-light rounded shadow">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <h2 class="text-center mb-4">Login</h2>
+
+      <div class="mb-3">
+        <label for="userName" class="form-label">Username</label>
+        <input id="userName" formControlName="userName" type="text" class="form-control" placeholder="Enter username" />
+        <div *ngIf="userName?.invalid && userName?.touched" class="text-danger small">
+          Username is required.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" formControlName="password" type="password" class="form-control"
+          placeholder="Enter password" />
+        <div *ngIf="password?.invalid && password?.touched" class="text-danger small">
+          Password is required and must be at least 6 characters.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success w-100" [disabled]="loginForm.invalid">Login</button>
+    </form>
+  </div>
+</div>
+

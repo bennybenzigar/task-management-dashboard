@@ -1,0 +1,21 @@
+<h2>Task History</h2>
+<div class=" mt-4">
+
+
+  <div class="row justify-content-end d-flex mb-2">
+    <button class="create-btn export-btn" (click)="export()">Export History</button>
+  </div>
+
+  <input type="text" class="form-control mb-3" placeholder="Search..." [(ngModel)]="searchValue"
+    (ngModelChange)="onQuickFilterChanged()" />
+
+  <ag-grid-angular style="width: auto; height: 400px;" class="ag-theme-alpine" [rowData]="rowData"
+    [columnDefs]="columnDefs" [rowDragManaged]="true" [animateRows]="true" [pagination]="true" [paginationPageSize]="10"
+    (gridReady)="onGridReady($event)" [defaultColDef]="{
+        sortable: true,
+        filter: true,
+        resizable: true
+      }" [getRowClass]="getRowClass.bind(this)">
+  </ag-grid-angular>
+
+</div>
