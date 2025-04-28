@@ -1,27 +1,72 @@
-# TaskManagementApp
+# Task Management Dashboard (Kanban Board)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Username: admin, Password: admin@123
+Username: benny, Password: benny@123
 
-## Development server
+## Overview
+This project is a **Task Management Dashboard** built with **Angular**, featuring:
+- Kanban-style board (To Do, In Progress, Done)
+- Role-based user access
+- Create, move, and assign tasks
+- Authentication with route guards
+- Toastr notifications
+- API persistence using a mock backend (Firebase Realtime Database)
+- Admin and User roles
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Features
+- 🔹 View tasks categorized by status
+- 🔹 Create new tasks (Admins only)
+- 🔹 Drag & Drop tasks between columns
+- 🔹 Role-based task status update access
+- 🔹 Admin can assign tasks to users
+- 🔹 Authentication system with route guards
+- 🔹 Task summary
+- 🔹 Toastr popups for success and error messages
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## User Roles
+- **Admin**:
+  - Can create users
+  - Can create and assign tasks
+  - Can update user status
+  - Username: `admin`, Password: `admin@123`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **User**:
+  - Can view and update assigned tasks
+  - Username: `benny`, Password: `benny@123`
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
+- Angular
+- Angular Routing
+- Angular Forms
+- Angular Route Guards
+- ngx-toastr
+- Angular DragDropModule (Cdk)
+- Firebase (Mock Realtime Database)
+- Bootstrap
+- Aggrid
+- Angular materials
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation Instructions
+1. Clone the repository:
 
-## Further help
+git clone https://github.com/bennybenzigar/task-management-dashboard.git
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+2. Navigate to the project directory:
+
+
+3. Open Terminal
+
+cd task-management-dashboard
+
+
+npm install
+ng serve --open
